@@ -36,12 +36,12 @@ AppAsset::register($this);
 					'id' => 'login-form',
 					'fieldConfig'=>[
 						'options' => ['tag' => 'tr','class' => 'form-group'],
-						'template' => '<td class="hAlign_left padding_r10" width="70" style="border: none;">{label}:</td><td style="border: none;">{input}</td>',
+						'template' => '<td class="hAlign_left padding_r10" width="90" style="border: none;">{label}:</td><td style="border: none;">{input}</td>',
 						
 					]
 			]);?>
 				<table class="table" style="border: none;">
-					<?= $form->field($model, 'username') ?>
+					<?= $form->field($model, 'username')->textInput() ?>
 					<?= $form->field($model, 'password')->passwordInput() ?>
 					<tr class="form-group">
 						<td class="hAlign_left padding_r10" style="border: none;">&nbsp;</td>
