@@ -12,6 +12,7 @@ use backend\models\ContactForm;
 
 class SiteController extends Controller
 {
+    public $layout = 'main';
     /**
      * {@inheritdoc}
      */
@@ -61,9 +62,23 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index');
-    }
+        if(! \Yii::$app->user->isGuest)
+        {
+            //return $this->redirect(['site/index']);
+            return $this->render('index');
+        }
 
+        $model = new LoginForm();
+        if($model->load($_POST) && $model->login())
+        {
+            //return $this->redirect(['site/index']);
+            return $this->render('index');
+        }
+        else
+        {
+            return $this->render('login', ['model' => $model]);
+        }
+    }
     /**
      * Login action.
      *
@@ -86,6 +101,7 @@ class SiteController extends Controller
         ]);
     }
 
+    
     /**
      * Logout action.
      *
