@@ -21,7 +21,7 @@ AppAsset::register($this);
 <html lang="<?= Yii::$app->language ?>">
 <head>
 	<meta charset="<?= Yii::$app->charset ?>"/>
-	<title>登录管理中心——LuLu CMS</title>
+	<title>Login Admin Center——Canada P2P</title>
 	<?php $this->head() ?>
 </head>
 <body style="height: auto;">
@@ -30,7 +30,7 @@ AppAsset::register($this);
 		<tr>
 			
 			<td valign="top">
-			<h1>LuLu CMS 管理中心</h1>
+			<h1>Canada P2P Admin</h1>
 			<div>
 			<?php $form = ActiveForm::begin([
 					'id' => 'login-form',
@@ -46,7 +46,7 @@ AppAsset::register($this);
 					<tr class="form-group">
 						<td class="hAlign_left padding_r10" style="border: none;">&nbsp;</td>
 						<td style="border: none;">
-							<?= Html::submitButton('登录', ['class' => 'btn btn-primary']) ?>
+							<?= Html::submitButton('Login', ['class' => 'btn btn-primary']) ?>
 						</td>
 					</tr>
 				</table>
