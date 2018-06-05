@@ -3,8 +3,8 @@
 namespace backend\controllers;
 
 use Yii;
-use app\models\Loan;
-use app\models\LoanSearch;
+use backend\models\Loan;
+use backend\models\LoanSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;

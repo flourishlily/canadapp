@@ -3,8 +3,8 @@
 namespace backend\controllers;
 
 use Yii;
-use app\models\Invest;
-use app\models\InvestSearch;
+use backend\models\Invest;
+use backend\models\InvestSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
