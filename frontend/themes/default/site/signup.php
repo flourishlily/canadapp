@@ -81,7 +81,7 @@ $this->params['breadcrumbs'][] = $this->title;
 					      <?=Html::checkbox('',true,['label'=>'同意','ischeck'=>true,'checked'=>'true'])?>
 					     </div>
 					     <div style="float:right;margin:10px 20px">
-	<a href='http://www.microriches.cn/index.php?r=site/about&about_id=protocol' target="_blank">《借贷和理财协议》</a>
+	<a href='index.php?r=site/about&about_id=protocol' target="_blank">《借贷和理财协议》</a>
 					     </div>
 					     <div class="gdcls"></div>
 					</div>

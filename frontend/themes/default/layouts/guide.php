@@ -21,12 +21,12 @@ AppAsset::register($this);
 
 <div style="float:left;width:230px;">
 <ul class="nav nav-pills nav-stacked" style=>
-   <li id="company"><a href="/index.php?r=site/about&about_id=company">公司介绍</a></li>
-   <li id="team"><a href="/index.php?r=site/about&about_id=team">创业团队</a></li>
-   <li id="partner"><a href="/index.php?r=site/about&about_id=partner">合作伙伴</a></li>
-   <li id="recent"><a href="/index.php?r=site/about&about_id=recent">最新动态</a></li>
-   <li id="join"><a href="/index.php?r=site/about&about_id=join">招贤纳士</a></li>
-   <li id="contact"><a href="/index.php?r=site/about&about_id=contact">联系我们</a></li>
+   <li id="company"><a href="index.php?r=site/about&about_id=company">公司介绍</a></li>
+   <li id="team"><a href="index.php?r=site/about&about_id=team">创业团队</a></li>
+   <li id="partner"><a href="index.php?r=site/about&about_id=partner">合作伙伴</a></li>
+   <li id="recent"><a href="index.php?r=site/about&about_id=recent">最新动态</a></li>
+   <li id="join"><a href="index.php?r=site/about&about_id=join">招贤纳士</a></li>
+   <li id="contact"><a href="index.php?r=site/about&about_id=contact">联系我们</a></li>
 </ul>
 </div>
 

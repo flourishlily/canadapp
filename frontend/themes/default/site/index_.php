@@ -116,14 +116,14 @@ $this->registerCssFile(CommonUtility::getThemeUrl('css_3/content.css'));
    </div>
    <div class="index-basic">
 	<div class="tr-row ht2"><img src="<?php echo CommonUtility::getThemeUrl()?>/images/basic.jpg" style="height:160px; width:500px;margin-bottom:10px;" /></div>
-	<div class="tr-row ht2"><div style="background-image:url(<?php echo CommonUtility::getThemeUrl()?>/images/xybutton.jpg);width:415px;height:130px;text-align:right;margin-left:50px;margin-top:20px;padding-top:106px; padding-right:50px;"><a href="/index.php?r=site/borrow" style="">查看详情</a></div></div>
+	<div class="tr-row ht2"><div style="background-image:url(<?php echo CommonUtility::getThemeUrl()?>/images/xybutton.jpg);width:415px;height:130px;text-align:right;margin-left:50px;margin-top:20px;padding-top:106px; padding-right:50px;"><a href="index.php?r=site/borrow" style="">查看详情</a></div></div>
    </div>
    <div class="clear"></div>
    <div class="index-basic">
 	<div class="index-invest" style="background-image:url(<?php echo CommonUtility::getThemeUrl()?>/images/di1.jpg); height:200px;width:1200px;margin-left:-100px;">
-		<div class="tr-h1 color1"><a href="/index.php?r=site/invest">米粒投</a></div>
+		<div class="tr-h1 color1"><a href="index.php?r=site/invest">米粒投</a></div>
 		<div class="tr-content">根据自己的意愿和偏好自行投资，随时且直接的在线投给借款的每一个客户，让理财真正做到随时、随地，简单自由。<br> 年化率14%-20%，期限3-36个月自选</div>
-		<div class="tr-h1 color1"><a href="/index.php?r=site/invest">定盈投</a></div>
+		<div class="tr-h1 color1"><a href="index.php?r=site/invest">定盈投</a></div>
 		<div class="tr-content">根据沃米贷平台发出的计划和要求，理财用户申请加入后进行定向投资，确保资金安全，适用本金保障。<br> 年化率8%-12%，收益稳定</div>
 	</div>
    </div>

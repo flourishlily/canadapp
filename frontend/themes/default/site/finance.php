@@ -29,7 +29,7 @@ $this->registerCssFile(CommonUtility::getThemeUrl('css_3/borrow.css'));
                         </ul>
                 </div>
                 <div class="tr-button">
-                        <a href="/index.php?r=site/invest"><input class="b-button" type="button" value="去申请" /></a>
+                        <a href="index.php?r=site/invest"><input class="b-button" type="button" value="去申请" /></a>
                 </div>
         </div>
         <div class="tr-row border ht1">
@@ -43,7 +43,7 @@ $this->registerCssFile(CommonUtility::getThemeUrl('css_3/borrow.css'));
                         </ul>
                 </div>
                 <div class="tr-button">
-                       <a href="/index.php?r=site/invest"><input class="b-button" type="button" value="去申请" /></a>
+                       <a href="index.php?r=site/invest"><input class="b-button" type="button" value="去申请" /></a>
                 </div>
         </div>
    </div>
