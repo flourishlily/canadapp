@@ -82,8 +82,8 @@ ThemeAsset::register($this);
             $menuItems[] = [ 'label' => '用户中心','url'   => ['/site/center']];
             $menuItems[] = [ 'label' => '关于我们','url'   => ['/upgrade/'],
                              'items' => [
-                                                ['label' => '公司介绍', 'url' => '/index.php?r=site/about&about_id=company', 'active' => false],
-                                                ['label' => '团队成员', 'url' => '/index.php?r=site/about&about_id=team', 'active' => false,'style'=>'width:30px'],
+                                                ['label' => '公司介绍', 'url' => 'index.php?r=site/about&about_id=company', 'active' => false],
+                                                ['label' => '团队成员', 'url' => 'index.php?r=site/about&about_id=team', 'active' => false,'style'=>'width:30px'],
                                         ],
                            ];
             echo Nav::widget([
@@ -103,10 +103,10 @@ ThemeAsset::register($this);
 <!--	<div class="clear"></div>-->
 	<footer class="footer" id="footer">
 	    <div class="container">
-		<p class="pull-left"><a href="/index.php?r=site/about&about_id=company">公司介绍</a></p>
-		<p class=""><a href="/index.php?r=site/about&about_id=company">社会责任</a></p>
-		 <p class=""><a href="/index.php?r=site/about&about_id=contact">联系我们</a></p>
-		 <p class=""><a href="/index.php?r=site/about&about_id=join">招贤纳士</a></p>
+		<p class="pull-left"><a href="index.php?r=site/about&about_id=company">公司介绍</a></p>
+		<p class=""><a href="index.php?r=site/about&about_id=company">社会责任</a></p>
+		 <p class=""><a href="index.php?r=site/about&about_id=contact">联系我们</a></p>
+		 <p class=""><a href="index.php?r=site/about&about_id=join">招贤纳士</a></p>
 	    </div>
 	    <div class="info">
                 <p class="line-r">&copy; 沃米贷 <?= date('Y') ?></p>

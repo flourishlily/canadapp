@@ -181,9 +181,9 @@ class SiteController extends BaseFrontController
                      }
 		}
 		
-		Yii::$app->user->setReturnUrl('/index.php?r=site/loan');
+		Yii::$app->user->setReturnUrl('index.php?r=site/loan');
 		Yii::info("he is a quest ,to login");
-		return $this->redirect("/index.php?r=site/login");
+		return $this->redirect("index.php?r=site/login");
         }
 
 	public function actionInvest(){
@@ -210,9 +210,9 @@ class SiteController extends BaseFrontController
                          return $this->render('Invest', ['model' => $model]);
                      }
 		}
-		Yii::$app->user->setReturnUrl('/index.php?r=site/invest');
+		Yii::$app->user->setReturnUrl('index.php?r=site/invest');
 		Yii::info("he is a quest ,to login");
-		return $this->redirect("/index.php?r=site/login");
+		return $this->redirect("index.php?r=site/login");
         }
 
         //用户中心
@@ -224,8 +224,8 @@ class SiteController extends BaseFrontController
 		     //$this->layout = false;
 		     return $this->render('userCenter');
 		}
-		Yii::$app->user->setReturnUrl('/index.php?r=site/center');
-		return $this->redirect("/index.php?r=site/login");
+		Yii::$app->user->setReturnUrl('index.php?r=site/center');
+		return $this->redirect("index.php?r=site/login");
 	}
 	//借贷管理
         public function actionCenterLoan()
