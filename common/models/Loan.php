@@ -25,7 +25,7 @@ use yii\behaviors\TimestampBehavior;
  * @property string $loan_type
  */
 
-class Loan extends BaseActiveRecord
+class Loan extends ActiveRecord
 {
     
     public function setUserId($userId)

@@ -6,7 +6,7 @@ use common\models\Loan;
 use common\models\User;
 use yii\base\Model;
 use Yii;
-
+use yii\db\Query;
 
 /**
  * Loan form
@@ -87,7 +87,7 @@ class LoanForm extends Model
 
     public function getLoanInfoByUserId($userId)
     {
-        $allLoanInfo = Loan::model()->findAll("username=:username", array(":username"=>$userId));
+        $allLoanInfo = Loan::find()->where(['username' => $userId]);
         return $allLoanInfo;
     }
 }

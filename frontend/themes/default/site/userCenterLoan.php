@@ -4,23 +4,30 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use frontend\models\LoanForm; //kang
 use yii\data\Pagination;
+use yii\data\ActiveDataProvider;
+use yii\grid\GridView;
 
 /**
  * @var yii\web\View $this
  * @var yii\widgets\ActiveForm $form
  * @var common\models\Loan $model
  */
+$this->title = '用户中心';
+$this->params['breadcrumbs'][] = $this->title;
+?>
+
+<h1>您的贷款申请列表如下</h1>
+<?php 
     Yii::info("yesyesyo");
     if(! \Yii::$app->user->isGuest)
     {  Yii::info("nnnno");
-        Yii::info("he is logged");
-        //用户已登录
 
+        //用户已登录
+        //Yii::info(Yii::$app->user);
         $model = new LoanForm();
-        if($model->load(Yii::$app->request->post())) {
+        //if($model->load(Yii::$app->request->post())) {
             $var = Yii::$app->user->identity->username;
             $loanInfo = $model->getLoanInfoByUserId($var);
-
             $pagination = new Pagination([
                 'defaultPageSize' => 5,
                 'totalCount' => $loanInfo->count(),
@@ -31,64 +38,54 @@ use yii\data\Pagination;
                 ->limit($pagination->limit)
                 ->all();
 
-
             if($loanList)
             {
-                echo 'success';
-                return $this->render('myLoan', [
-                    'loanList' => $loanList,
-                    'pagination' => $pagination,
-                ]);
+                Yii::info( 'success');
             }else{
-                echo 'failed';
+                Yii::info('failed');
             }
-                    
-        }else{
-            echo 'noload';
-        }
+            
+            $provider = new ActiveDataProvider([
+                'query' => $loanInfo,
+                'pagination' => [
+                    'pageSize' => 5,
+                ],
+                'sort' => [
+                    'defaultOrder' => [
+                        'created_at' => SORT_DESC,
+                        'amount' => SORT_ASC,
+                    ]
+                ],
+            ]);                    
+        //}else{
+        //    echo 'noload';
+        //}
 
     }else{
-        echo 'nologin';
+        Yii::info( 'nologin');
     }
-/*
-    Yii::$app->user->setReturnUrl('/index.php?r=site/loan');
-    Yii::info("he is a quest ,to login");
-    return $this->redirect("/index.php?r=site/login");
-
-    if(Yii::$app->request->isPost){
-
-        $mail=$_POST['mail'];
-        $rand=Yii::$app->getSecurity()->generateRandomKey(8);
-
-        if(Yii::$app->cache->set($mail,$rand,70) && Yii::$app->mailer->compose()->setTo($mail)->setSubject('欢迎注册沃米贷')
-           ->setTextBody("尊敬的用户，\r  欢迎注册沃米贷，这是您的注册码 ".$rand.".\r  请在2分钟内使用,注册码不要泄露给他人.")
-           ->send())
-        {
-            echo 'ok';
-        }else{
-            echo 'error';
-        }
-
-    }else{
-        $mail=$_GET['mail'];
-        $code=$_GET['code'];
-
-        $val=Yii::$app->cache->get($mail);
-
-        if($val!=NULL)
-        {
-           if($val==$code){
-                echo 'equal';
-           }else{
-                echo 'unequal';
-           }
-        }else{
-                echo 'timeout';
-        }
-
-    }
-*/
-
 ?>
+
+<div style="float: left; margin: 10px; padding: 10px; width: 900px; text-align: center;">
+    
+    <?= GridView::widget([
+        'dataProvider' => $provider,
+        'columns' => [
+            'id',
+            'loan_type',
+            'userid',
+            'realname',
+            'idcard',
+            //'phone',
+            //'amount',
+            //'username',
+            //'created_at',
+            //'updated_at',
+
+        ],
+    ]); ?>
+</div>
+<div class="clear"></div>
+
 
 

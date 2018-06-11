@@ -221,8 +221,26 @@ class SiteController extends BaseFrontController
 		if(! \Yii::$app->user->isGuest)
 		{
 		     //用户已登录
-		     //$this->layout = false;
-		     return $this->render('userCenter');
+                    $this->layout = 'userCenter';
+                    if(isset($_GET['center_id']))
+                    {
+                         switch($_GET['center_id'])
+                         {
+                                 case "loan":
+                                      $torend='userCenterLoan';
+                                      break;
+                                 case "invest":
+                                      $torend='userCenterInvest';
+                                      break;
+                                 default:
+                                      $torend='userCenterWelcome';
+                         }
+                    }else{
+                         $torend='userCenterWelcome';
+                    }
+                    
+		    
+		    return $this->render($torend);
 		}
 		Yii::$app->user->setReturnUrl('index.php?r=site/center');
 		return $this->redirect("index.php?r=site/login");
