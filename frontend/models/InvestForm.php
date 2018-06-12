@@ -82,6 +82,12 @@ class InvestForm extends Model
 
         return null;
     }
+    
+    public function getInvestInfoByUserId($userId)
+    {
+        $allLoanInfo = Invest::find()->where(['username' => $userId]);
+        return $allLoanInfo;
+    }
 }
 
                                            

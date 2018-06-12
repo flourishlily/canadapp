@@ -12,11 +12,11 @@ use yii\grid\GridView;
  * @var yii\widgets\ActiveForm $form
  * @var common\models\Loan $model
  */
-$this->title = '用户中心';
+$this->title = 'UserLoan';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 
-<h1>您的贷款申请列表如下</h1>
+<h1>Your loan list is:</h1>
 <?php 
     Yii::info("yesyesyo");
     if(! \Yii::$app->user->isGuest)
