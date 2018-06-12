@@ -232,6 +232,9 @@ class SiteController extends BaseFrontController
                                  case "invest":
                                       $torend='userCenterInvest';
                                       break;
+                                 case "info":
+                                      $torend='userCenterInfo';
+                                      break; 
                                  default:
                                       $torend='userCenterWelcome';
                          }
