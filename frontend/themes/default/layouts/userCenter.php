@@ -23,7 +23,7 @@ AppAsset::register($this);
     <p class="menu_head ">我的账户</p>
     <div style="display:none" class=menu_body >
       <a href="index.php?r=site/center&center_id=info">基本信息</a>
-      <a href="#">密码修改</a>
+      <a href="index.php?r=site/center&center_id=chgPwd">密码修改</a>
     </div>
 
 

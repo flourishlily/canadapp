@@ -235,7 +235,16 @@ class SiteController extends BaseFrontController
                                  case "info":
                                       $torend='userCenterInfo';
                                       break; 
-                                 default:
+                                 case "chgPwd":
+                                      $torend='userCenterChgPwd';
+                                      $model = new \frontend\models\ChgPwdForm();
+                                      if ($model->load(Yii::$app->request->post()) && $model->changePassword()) {
+                                          return $this->render('userCenterSuccess');
+                                      } else {
+                                          // 无论是初始化显示还是数据验证错误
+                                          return $this->render('userCenterChgPwd');
+                                      }
+                                  default:
                                       $torend='userCenterWelcome';
                          }
                     }else{
