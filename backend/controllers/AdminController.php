@@ -5,7 +5,6 @@ namespace backend\controllers;
 use Yii;
 use backend\base\BaseBackController;
 use backend\models\LoginForm;
-use common\includes\CommonUtility;
 
 class AdminController extends BaseBackController
 {
@@ -61,21 +60,8 @@ class AdminController extends BaseBackController
 		return $this->render('sys');
 	}
 
-	public function actionTaxonomy()
-	{
-		return $this->render('taxonomy');
-	}
-
 	public function actionContent()
 	{
 		return $this->render('content');
-	}
-
-	public function actionTpl()
-	{
-		$themes = CommonUtility::getFiles('themes', null,false);
-		$locals=[];
-		$locals['themes']=$themes;
-		return $this->render('tpl',$locals);
 	}
 }
