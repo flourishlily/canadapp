@@ -3,11 +3,11 @@
 namespace frontend\base;
 
 use Yii;
-use components\base\BaseView;
 use yii\base\Theme;
 use common\includes\CommonUtility;
+use yii\web\View;
 
-class BaseFrontView extends BaseView
+class BaseFrontView extends View
 {
 
 	public function init()

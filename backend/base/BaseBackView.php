@@ -3,10 +3,10 @@
 namespace backend\base;
 
 use Yii;
-use components\base\BaseView;
 use yii\helpers\Html;
+use yii\web\View;
 
-class BaseBackView extends BaseView
+class BaseBackView extends View
 {
 	private $labelWidth='120px';
 	

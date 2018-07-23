@@ -8,7 +8,6 @@
 namespace frontend\assets;
 
 use yii\web\AssetBundle;
-use components\LuLu;
 use common\includes\CommonUtility;
 
 /**

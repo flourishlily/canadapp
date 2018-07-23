@@ -403,19 +403,6 @@ class SiteController extends Controller
                 return $this->render('finance');
         }	
 
-	/*private function setSeo()
-	{
-		$view = LuLu::getView();
-		
-		$title = CommonUtility::getCachedConfigValue('seo_title');
-		if(empty($title))
-		{
-			$title = '首页——' . CommonUtility::getCachedConfigValue('seo_name');
-		}
-		$view->setTitle($title);
-		$view->registerMetaTag(['name' => 'keywords', 'content' => CommonUtility::getCachedConfigValue('seo_keywords')]);
-		$view->registerMetaTag(['name' => 'description', 'content' => CommonUtility::getCachedConfigValue('seo_description')]);
-	}*/
 	public function actionError()
 	{
 	    if (\Yii::$app->exception !== null) {

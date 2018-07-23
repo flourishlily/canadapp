@@ -3,7 +3,6 @@
 namespace common\models\config;
 
 use Yii;
-use components\helpers\TStringHelper;
 
 /**
  * This is the model class for table "yii_config".
