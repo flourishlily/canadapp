@@ -13,15 +13,12 @@ use common\models\User;
 use yii\web\BadRequestHttpException;
 use yii\base\InvalidParamException;//yilong
 use yii\base\Security;//yilong
-use yii\widgets\ActiveForm;
-//use components\LuLu;
-use frontend\base\BaseFrontController;
 use frontend\models\SignupForm;
 use frontend\models\LoanForm; //kang
 use frontend\models\InvestForm; //kang
-use common\includes\CommonUtility;
+use yii\web\Controller;
 
-class SiteController extends BaseFrontController
+class SiteController extends Controller
 {
 
 	public function actionShow(){

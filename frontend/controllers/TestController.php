@@ -7,7 +7,7 @@ use common\models\search\TestSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-use frontend\base\BaseFrontController;
+
 /**
  * TestController implements the CRUD actions for Test model.
  */

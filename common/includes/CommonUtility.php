@@ -6,7 +6,6 @@ use common\models\ContentFlag;
 use yii\web\UploadedFile;
 use components\LuLu;
 use components\helpers\TFileHelper;
-use common\models\config\Config;
 use yii\base\InvalidParamException;
 use common\models\Channel;
 
