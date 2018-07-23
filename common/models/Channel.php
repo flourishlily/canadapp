@@ -6,7 +6,8 @@ use TS\TActiveRecord;
 use components\base\BaseActiveRecord;
 use components\helpers\TFileHelper;
 use components\LuLu;
-/**
+/**To be remove!!!!!
+ * 
  * This is the model class for table "yii_channel".
  *
  * @property integer $id

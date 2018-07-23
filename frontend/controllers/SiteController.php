@@ -14,7 +14,7 @@ use yii\web\BadRequestHttpException;
 use yii\base\InvalidParamException;//yilong
 use yii\base\Security;//yilong
 use yii\widgets\ActiveForm;
-use components\LuLu;
+//use components\LuLu;
 use frontend\base\BaseFrontController;
 use frontend\models\SignupForm;
 use frontend\models\LoanForm; //kang
@@ -31,7 +31,7 @@ class SiteController extends BaseFrontController
 	public function actionClose($message = null)
 	{
 		$this->layout = false;
-		$this->setSeo();
+		//$this->setSeo();
 		return $this->render('close');
 	}
 	public function actionTest()
@@ -40,7 +40,7 @@ class SiteController extends BaseFrontController
 	}
 	public function actionIndex()
 	{
-		$this->setSeo();
+		//$this->setSeo();
 		$params = [];
 		return $this->render('index_', $params);
 	}
@@ -406,7 +406,7 @@ class SiteController extends BaseFrontController
                 return $this->render('finance');
         }	
 
-	private function setSeo()
+	/*private function setSeo()
 	{
 		$view = LuLu::getView();
 		
@@ -418,7 +418,7 @@ class SiteController extends BaseFrontController
 		$view->setTitle($title);
 		$view->registerMetaTag(['name' => 'keywords', 'content' => CommonUtility::getCachedConfigValue('seo_keywords')]);
 		$view->registerMetaTag(['name' => 'description', 'content' => CommonUtility::getCachedConfigValue('seo_description')]);
-	}
+	}*/
 	public function actionError()
 	{
 	    if (\Yii::$app->exception !== null) {
