@@ -3,7 +3,6 @@ $rootDir = __DIR__ . '/../..';
 require_once($rootDir . '/components/LuLu.php');
 
 require_once($rootDir . '/components/base/BaseActiveRecord.php');
-require_once($rootDir . '/components/base/BaseController.php');
 require_once($rootDir . '/components/base/BaseModel.php');
 require_once($rootDir . '/components/base/BaseView.php');
 require_once($rootDir . '/components/base/BaseAction.php');
